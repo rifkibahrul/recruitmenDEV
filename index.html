@@ -1,354 +1,724 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="src/img/logo/icon.png" />
     <title>My Portofolio</title>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <link href="src/output.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-</head>
-<body>
-    <!-- Navbar Start -->
-    <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
-        <div class="container">
-            <div class="flex items-center justify-between relative">
-                <div class="px-4">
-                    <a href="#about" class="font-bold text-primary text-lg block py-6">Muhammad Rifki</a>
-                </div>
-                <div class="flex items-center px-4">
-                    <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
-                        <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
-                        <span class="hamburger-line transition duration-300 ease-in-out"></span>
-                        <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
-                    </button>
 
-                    <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
-                        <ul class="block lg:flex">
-                            <li class="group">
-                                <a href="#about" class="text-base text-primary py-2 mx-8 flex group-hover:text-bright">About</a>
-                            </li>
-                            <li class="group">
-                                <a href="#experience" class="text-base text-primary py-2 mx-8 flex group-hover:text-bright">Experience and Education</a>
-                            </li>
-                            <li class="group">
-                                <a href="#skill" class="text-base text-primary py-2 mx-8 flex group-hover:text-bright">Skills</a>
-                            </li>
-                            <li class="group">
-                                <a href="#feedback" class="text-base text-primary py-2 mx-8 flex group-hover:text-bright">Feedback</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Icon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- Swipper -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- Tailwind -->
+    <link href="src/output.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body class="bg-color1">
+    <!-- Navbar Start -->
+    <header
+      class="bg-transparent absolute top-0 left-0 w-full flex items-center z-50"
+    >
+      <div class="container">
+        <div class="flex items-center justify-between relative">
+          <div class="px-4">
+            <a
+              href="#hero"
+              class="font-bold text-lg block py-6 text-color4 hover:text-color3"
+              >Muhammad Rifki</a
+            >
+          </div>
+          <div class="flex items-center px-4">
+            <button
+              id="hamburger"
+              name="hamburger"
+              type="button"
+              class="block absolute right-4 lg:hidden"
+            >
+              <span
+                class="hamburger-line transition duration-300 ease-in-out origin-top-left"
+              ></span>
+              <span
+                class="hamburger-line transition duration-300 ease-in-out"
+              ></span>
+              <span
+                class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"
+              ></span>
+            </button>
+
+            <nav
+              id="nav-menu"
+              class="hidden absolute py-5 bg-color2 shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none"
+            >
+              <ul class="block lg:flex">
+                <li class="group">
+                  <a
+                    href="#hero"
+                    class="text-base text-color4 py-2 mx-8 flex group-hover:text-color3"
+                    >Home</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#experience"
+                    class="text-base text-color4 py-2 mx-8 flex group-hover:text-color3"
+                    >Experience and Education</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#skill"
+                    class="text-base text-color4 py-2 mx-8 flex group-hover:text-color3"
+                    >Skills</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#project"
+                    class="text-base text-color4 py-2 mx-8 flex group-hover:text-color3"
+                    >Project</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
+      </div>
     </header>
     <!-- Navbar End -->
-     
-    <!-- About Start -->
-    <section id="about" class="pt-36">
-        <div class="container">
-            <div class="flex flex-wrap">
-                <div class="w-full self-center px-4 lg:w-1/2">
-                    <h1 class="text-4xl font-semibold text-primary">Hallo, saya<span class="block font-bold text-bright text-4xl mt-1 mb-10">Muhammad Rifki Bahrul Ulum</span></h1>
-                    <p class="font-medium text-gray-700 mb-10 leading-relaxed text-lg">I’m a hardworking and diligent Informatics graduate with a strong passion for learning. I have experience in collaborative teamwork and am committed to contributing my skills to web development, both frontend and backend. Recently, I earned the Junior Web Programmer and Junior Web Developer certifications, which have strengthened my expertise in web development.</p>
-                    <div class="flex items-center space-x-4">
-                        <a href="https://drive.google.com/file/d/10cVNMKNSKhG-ZzQWt2Fc8uXAoSmmhxGL/view?usp=sharing" target="_blank" class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:text-bright transition duration-200 ease-in-out">
-                            Download CV
-                        </a>
-                        <a href="https://wa.me/+6285804049583" target="_blank" class="ml-4">
-                            <img src="src/img/logo/whatsapp.svg" alt="whatsapp" width="40">
-                        </a>
-                        <a href="mailto:rifkibahrululum@gmail.com" target="_blank" class="ml-4">
-                            <img src="src/img/logo/gmail.svg" alt="gmail" width="40">
-                        </a>
-                        <a href="https://github.com/Rifki-aw" target="_blank" class="ml-4">
-                            <img src="src/img/logo/github.svg" alt="github" width="40">
-                        </a>
-                    </div>
-                </div>
 
-                <div class="w-full self-end px-4 lg:w-1/2">
-                    <div class="relative mt-10">
-                        <img src="src/img/rifki.png" alt="Rifki" class="max-w-full mx-auto rounded-full">
-                        <span class="absolute bottom-0 -z-10 left-1/2 -translate-x-1/2">
-                            <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                                <path fill="#1e293b" d="M44.9,-78.5C57.9,-70.2,67.9,-57.6,75,-43.8C82.1,-30,86.3,-15,87.6,0.8C88.9,16.5,87.5,33.1,80.3,46.8C73.2,60.6,60.4,71.5,46,78.1C31.7,84.8,15.9,87.2,0.3,86.7C-15.3,86.2,-30.5,82.8,-44.3,75.8C-58.1,68.8,-70.3,58.2,-78.7,45C-87.1,31.8,-91.7,15.9,-92.3,-0.3C-92.8,-16.6,-89.5,-33.1,-81.2,-46.6C-72.9,-60,-59.8,-70.4,-45.4,-77.9C-31.1,-85.3,-15.5,-90,0.2,-90.3C15.9,-90.7,31.9,-86.8,44.9,-78.5Z" transform="translate(100 100) scale(1)" />
-                            </svg>
-                        </span>
-                    </div>
-                </div>
+    <!-- Hero Start -->
+    <section id="hero" class="relative z-20 pt-36">
+      <div class="container mx-auto">
+        <div class="flex flex-wrap">
+          <div class="hero__text w-full self-center px-4 lg:w-1/2">
+            <h1 class="text-4xl font-semibold text-color3">
+              Hallo! 👋<span
+                class="block font-bold text-color4 text-4xl mt-1 mb-10"
+                >Muhammad Rifki Bahrul Ulum</span
+              >
+            </h1>
+            <p class="text-base font-extralight text-color4 mb-10 leading-relaxed">
+              I’m a hardworking and diligent Informatics graduate with a strong
+              passion for learning. I have experience in collaborative teamwork
+              and am committed to contributing my skills to web development,
+              both frontend and backend. Recently, I earned the Junior Web
+              Programmer and Junior Web Developer certifications, which have
+              strengthened my expertise in web development.
+            </p>
+            <div class="flex items-center space-x-4">
+              <a
+                href="https://drive.google.com/file/d/10cVNMKNSKhG-ZzQWt2Fc8uXAoSmmhxGL/view?usp=sharing"
+                target="_blank"
+                class="text-base font-semibold text-color4 bg-color3 py-3 px-8 rounded-full hover:shadow-lg hover:bg-color4 hover:text-color3 transition duration-200 ease-in-out shadow-lg"
+              >
+                Download CV
+              </a>
+              <a
+                href="https://wa.me/+6285804049583"
+                target="_blank"
+                class="ml-4"
+              >
+                <i
+                  class="ri-whatsapp-line text-[40px] text-color4 hover:text-color3"
+                ></i>
+              </a>
+              <a
+                href="mailto:rifkibahrululum@gmail.com"
+                target="_blank"
+                class="ml-4"
+              >
+                <i
+                  class="ri-mail-line text-[40px] text-color4 hover:text-color3"
+                ></i>
+              </a>
+              <a
+                href="https://github.com/Rifki-aw"
+                target="_blank"
+                class="ml-4"
+              >
+                <i
+                  class="ri-github-fill text-[40px] text-color4 hover:text-color3"
+                ></i>
+              </a>
             </div>
+          </div>
+
+          <div class="hero__img w-full self-end px-4 lg:w-1/2">
+            <div class="relative mt-10">
+              <img
+                src="src/img/rifki.png"
+                alt="Rifki"
+                class="max-w-full mx-auto rounded-full"
+              />
+              <span class="absolute bottom-0 -z-10 left-1/2 -translate-x-1/2">
+                <svg
+                  width="400"
+                  height="400"
+                  viewBox="0 0 200 200"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill="#1e293b"
+                    d="M44.9,-78.5C57.9,-70.2,67.9,-57.6,75,-43.8C82.1,-30,86.3,-15,87.6,0.8C88.9,16.5,87.5,33.1,80.3,46.8C73.2,60.6,60.4,71.5,46,78.1C31.7,84.8,15.9,87.2,0.3,86.7C-15.3,86.2,-30.5,82.8,-44.3,75.8C-58.1,68.8,-70.3,58.2,-78.7,45C-87.1,31.8,-91.7,15.9,-92.3,-0.3C-92.8,-16.6,-89.5,-33.1,-81.2,-46.6C-72.9,-60,-59.8,-70.4,-45.4,-77.9C-31.1,-85.3,-15.5,-90,0.2,-90.3C15.9,-90.7,31.9,-86.8,44.9,-78.5Z"
+                    transform="translate(100 100) scale(1)"
+                  />
+                </svg>
+              </span>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
-    <!-- About End -->
+    <!-- Hero End -->
 
     <!-- Experience Start -->
-     <section id="experience" class="pt-36 pb-16 bg-slate-100">
-        <div class="container">
-            <div class="flex flex-col lg:flex-row flex-wrap">
-                <!-- Kiri -->
-                <div class="w-full px-4 lg:w-1/2">
-                    <div class="max-w-xl mx-auto mb-16">
-                        <h4 class="font-bold text-3xl text-primary mb-2">Experience</h4>
-                    </div>
-                    <div class="timeline">
-                        <div class="timeline-wrapper">
-                             <div class="timeline-yr">
-                                  <span>2022</span>
-                             </div>
-                             <div class="timeline-info">
-                                <span class="text-lg font-semibold text-black">MATCHING FUND IOS PARK CV. WASTU KENCANA TEKNIK</span>
-                                <h3 class="font-medium text-sm text-secondary italic">Machine Learning Intern</h3>
-                                <ul class="list-disc ml-4">
-                                    <li class="font-medium text-primary">Studying the development of machine learning for automatic gate control purposes.</li>
-                                    <li class="font-medium text-primary">Designing a Smart Parking System with Parking Quota Calculation Features.</li>
-                                </ul>
-                                <small>Tools : Python</small>
-                             </div>
-                        </div>
-    
-                        <div class="timeline-wrapper">
-                            <div class="timeline-yr">
-                                <span>2023</span>
-                            </div>
-                            <div class="timeline-info">
-                                <span class="text-lg font-semibold text-black">Badan Pemeriksa Keuangan Perwakilan Provinsi Jawa Timur</span>
-                                <h3 class="font-medium text-sm text-secondary italic">Web Developer Intern</h3>
-                                <ul class="list-disc ml-4">
-                                    <li class="font-medium text-primary">Create a web-based application with the name SIPERU using HTML, PHP, CSS, and Bootstrap.</li>
-                                    <li class="font-medium text-primary">Creating UI/UX for a web-based application called SIPERU using Figma</li>
-                                    <li class="font-medium text-primary">Created and designed a database using MySQL for the SIPERU web-based application.</li>
-                                </ul>
-                                <small>Tools : HTML, PHP, CSS, Bootstrap, MySql</small>
-                            </div>
-                        </div>
-    
-                        <div class="timeline-wrapper">
-                            <div class="timeline-yr">
-                                <span>2023</span>
-                            </div>
-                            <div class="timeline-info">
-                                <span class="text-lg font-semibold text-black">Vocational School Graduate Academy Digital Talent Scholarship BPSDMP Kominfo Surabaya</span>
-                                <h3 class="font-medium text-sm text-secondary italic">Junior Web Developer</h3>
-                                <ul class="list-disc ml-4">
-                                    <li class="font-medium text-primary">Create web-based applications using HTML, PHP, CSS, and Bootstrap.</li>
-                                    <li class="font-medium text-primary">Create and design databases using MySQL.</li>
-                                </ul>
-                                <small>Tools : HTML, PHP, CSS, Bootstrap, MySql</small>
-                            </div>
-                        </div>
-
-                        <div class="timeline-wrapper">
-                            <div class="timeline-yr">
-                                <span>2023</span>
-                            </div>
-                            <div class="timeline-info">
-                                <span class="text-lg font-semibold text-black">Professional Certification Body UPN "VETERAN" JAWA TIMUR</span>
-                                <h3 class="font-medium text-sm text-secondary italic">Junior Web Programmer</h3>
-                                <ul class="list-disc ml-4">
-                                    <li class="font-medium text-primary">Create a web-based application for a health equipment store using Laravel, PHP, CSS, and Bootstrap.</li>
-                                    <li class="font-medium text-primary">Create and design databases using MySQL.</li>
-                                </ul>
-                                <small>Tools : HTML, PHP, CSS, Bootstrap, MySql, Laravel</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Kanan -->
-                <div class="w-full px-4 lg:w-1/2 mt-8 lg:mt-0" id="education">
-                    <div class="max-w-xl mx-auto mb-16">
-                        <h4 class="font-bold text-3xl text-m mb-2">Education</h4>
-                    </div>
-                    <div class="timeline">
-                        <div class="timeline-wrapper">
-                            <div class="timeline-yr">
-                                <span>2020-2024</span>
-                            </div>
-                            <div class="timeline-info">
-                                <span class="text-lg font-semibold text-black">Universitas Pembangunan Nasional Jawa Timur</span>
-                                <h3 class="font-medium text-sm text-secondary italic">Bachelor Degree in Informatika</h3>
-                                <ul class="list-disc ml-4">
-                                    <li class="font-medium text-primary">GPA: 3.79/4.00</li>
-                                    <li class="font-medium text-primary">Creating a SIPERU (Room Reservation Information System) application featuring room booking functionality and scheduling management for room usage</li>
-                                    <li class="font-medium text-primary">Creating a DESANET (basic information about villages, various village data, and promoting villages to the public) as a final project for the Web Programming course.</li>
-                                    <li class="font-medium text-primary">Obtained Junior Web Programmer and Junior Web Developer competency certificates from BNSP (National Professional Certification Agency).</li>
-                                    <li class="font-medium text-primary">Scored 450 English Proficiency Test.</li>
-                                    <li class="font-medium text-primary">Development of a Machine Learning Model for Cayenne Pepper Maturity Classification as a Thesis Proposal.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <section id="experience" class="relative z-20 pt-36 pb-16">
+      <div class="container">
+        <div class="flex flex-col lg:flex-row flex-wrap">
+          <!-- Kiri -->
+          <div class="w-full px-4 lg:w-1/2">
+            <div class="experience__text max-w-xl mx-auto mb-16">
+              <h4 class="font-bold text-3xl text-color4 mb-2">
+                Professional <span class="text-color3">Experience</span>
+              </h4>
             </div>
+            <div class="timeline">
+              <div class="experience__experience timeline-wrapper">
+                <div class="timeline-yr">
+                  <span>2022</span>
+                </div>
+                <div class="timeline-info">
+                  <span class="text-lg font-semibold text-color4"
+                    >MATCHING FUND IOS PARK CV. WASTU KENCANA TEKNIK</span
+                  >
+                  <h3
+                    class="font-medium text-sm text-color4 italic opacity-75 mt-1 mb-1"
+                  >
+                    Machine Learning Intern
+                  </h3>
+                  <ul class="list-disc ml-4">
+                    <li class="text-base font-light text-color4">
+                      Studying the development of machine learning for automatic
+                      gate control purposes.
+                    </li>
+                    <li class="text-base font-light text-color4">
+                      Designing a Smart Parking System with Parking Quota
+                      Calculation Features.
+                    </li>
+                  </ul>
+                  <!-- <small>Tools : Python</small> -->
+                  <h3 class="text-[16px] font-bold ml-[15px] text-color4 mt-2">
+                    Tools : <span class="text-color3">Python</span>
+                  </h3>
+                </div>
+              </div>
+
+              <div class="experience__experience timeline-wrapper">
+                <div class="timeline-yr">
+                  <span>2023</span>
+                </div>
+                <div class="timeline-info">
+                  <span class="text-lg font-semibold text-color4"
+                    >Badan Pemeriksa Keuangan Perwakilan Provinsi Jawa
+                    Timur</span
+                  >
+                  <h3 class="font-medium text-sm text-color4 italic opacity-75">
+                    Web Developer Intern
+                  </h3>
+                  <ul class="list-disc ml-4">
+                    <li class="text-base font-light text-color4">
+                      Create a web-based application with the name SIPERU using
+                      HTML, PHP, CSS, and Bootstrap.
+                    </li>
+                    <li class="text-base font-light text-color4">
+                      Creating UI/UX for a web-based application called SIPERU
+                      using Figma
+                    </li>
+                    <li class="text-base font-light text-color4">
+                      Created and designed a database using MySQL for the SIPERU
+                      web-based application.
+                    </li>
+                  </ul>
+                  <!-- <small>Tools : HTML, PHP, CSS, Bootstrap, MySql</small> -->
+                  <h3 class="text-[16px] font-bold ml-[15px] text-color4 mt-2">
+                    Tools :
+                    <span class="text-color3"
+                      >HTML, PHP, CSS, Bootstrap, MySql</span
+                    >
+                  </h3>
+                </div>
+              </div>
+
+              <div class="experience__experience timeline-wrapper">
+                <div class="timeline-yr">
+                  <span>2023</span>
+                </div>
+                <div class="timeline-info">
+                  <span class="text-lg font-semibold text-color4"
+                    >Vocational School Graduate Academy Digital Talent
+                    Scholarship BPSDMP Kominfo Surabaya</span
+                  >
+                  <h3 class="font-medium text-sm text-color4 italic opacity-75">
+                    Junior Web Developer
+                  </h3>
+                  <ul class="list-disc ml-4">
+                    <li class="text-base font-light text-color4">
+                      Create web-based applications using HTML, PHP, CSS, and
+                      Bootstrap.
+                    </li>
+                    <li class="text-base font-light text-color4">
+                      Create and design databases using MySQL.
+                    </li>
+                  </ul>
+                  <!-- <small>Tools : HTML, PHP, CSS, Bootstrap, MySql</small> -->
+                  <h3 class="text-[16px] font-bold ml-[15px] text-color4 mt-2">
+                    Tools :
+                    <span class="text-color3"
+                      >HTML, PHP, CSS, Bootstrap, MySql</span
+                    >
+                  </h3>
+                </div>
+              </div>
+
+              <div class="experience__experience timeline-wrapper">
+                <div class="timeline-yr">
+                  <span>2023</span>
+                </div>
+                <div class="timeline-info">
+                  <span class="text-lg font-semibold text-color4"
+                    >Professional Certification Body UPN "VETERAN" JAWA
+                    TIMUR</span
+                  >
+                  <h3 class="font-medium text-sm text-color4 italic opacity-75">
+                    Junior Web Programmer
+                  </h3>
+                  <ul class="list-disc ml-4">
+                    <li class="text-base font-light text-color4">
+                      Create a web-based application for a health equipment
+                      store using Laravel, PHP, CSS, and Bootstrap.
+                    </li>
+                    <li class="text-base font-light text-color4">
+                      Create and design databases using MySQL.
+                    </li>
+                  </ul>
+                  <!-- <small
+                    >Tools : HTML, PHP, CSS, Bootstrap, MySql, Laravel</small
+                  > -->
+                  <h3 class="text-[16px] font-bold ml-[15px] text-color4 mt-2">
+                    Tools :
+                    <span class="text-color3"
+                      >HTML, PHP, CSS, Bootstrap, MySql, Laravel</span
+                    >
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kanan -->
+          <div class="w-full px-4 lg:w-1/2 mt-8 lg:mt-0" id="education">
+            <div class="experience__text max-w-xl mx-auto mb-16">
+              <h4 class="font-bold text-3xl text-color4 mb-2">
+                Academic <span class="text-color3">Experience</span>
+              </h4>
+            </div>
+            <div class="timeline">
+              <div class="experience__experience timeline-wrapper">
+                <div class="timeline-yr">
+                  <span>2020-2024</span>
+                </div>
+                <div class="timeline-info">
+                  <span class="text-lg font-semibold text-color4"
+                    >Universitas Pembangunan Nasional Jawa Timur</span
+                  >
+                  <h3
+                    class="font-medium text-sm text-color4 italic opacity-75 mt-1 mb-1"
+                  >
+                    Bachelor Degree in Informatika
+                  </h3>
+                  <ul class="list-disc ml-4">
+                    <li class="text-base font-light text-color4">GPA: 3.79/4.00</li>
+                    <li class="text-base font-light text-color4">
+                      Obtained Junior Web Programmer and Junior Web Developer
+                      competency certificates from BNSP (National Professional
+                      Certification Agency).
+                    </li>
+                    <li class="text-base font-light text-color4">
+                      Scored 450 English Proficiency Test.
+                    </li>
+                    <li class="text-base font-light text-color4">
+                      Development of a Machine Learning Model for Cayenne Pepper
+                      Maturity Classification as a Thesis Proposal.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-     </section>
+      </div>
+    </section>
     <!-- Experience End -->
 
     <!-- Skill start -->
-     <section id="skill" class="pt-36 pb-16">
-        <div class="container">
-            <div class="w-full px-4">
-                <div class="max-w-xl mx-auto text-center mb-16">
-                    <h2 class="font-bold text-3xl text-primary mb-4">My Skills</h2>
-                </div>
-            </div>
-            <div class="w-full px-4 flex flex-wrap justify-center">
-                <div class="mb-12 p-4 md:w-1/7">
-                    <h3 class="font-semibold text-xl mb-3 text-zinc-900 text-center">Figma</h3>
-                    <div class="overflow-hidden">
-                        <img src="src/img/logo/figma.svg" alt="figma" width="100">
-                    </div>
-                </div>
-                <div class="mb-12 p-4 md:w-1/7">
-                    <h3 class="font-semibold text-xl mb-3 text-zinc-900 text-center">HTML</h3>
-                    <div class="overflow-hidden">
-                        <img src="src/img/logo/html5.svg" alt="html5" width="100">
-                    </div>
-                </div>
-                <div class="mb-12 p-4 md:w-1/7">
-                    <h3 class="font-semibold text-xl mb-3 text-zinc-900 text-center">CSS</h3>
-                    <div class="overflow-hidden">
-                        <img src="src/img/logo/css3.svg" alt="css3" width="100">
-                    </div>
-                </div>
-                <div class="mb-12 p-4 md:w-1/7">
-                    <h3 class="font-semibold text-xl mb-3 text-zinc-900 text-center">Bootstrap</h3>
-                    <div class="overflow-hidden">
-                        <img src="src/img/logo/bootstrap.svg" alt="bootstrap" width="100">
-                    </div>
-                </div>
-                <div class="mb-12 p-4 md:w-1/7">
-                    <h3 class="font-semibold text-xl mb-3 text-zinc-900 text-center">PHP</h3>
-                    <div class="overflow-hidden">
-                        <img src="src/img/logo/php.svg" alt="PHP" width="100">
-                    </div>
-                </div>
-                <div class="mb-12 p-4 md:w-1/7">
-                    <h3 class="font-semibold text-xl mb-3 text-zinc-900 text-center">Laravel</h3>
-                    <div class="overflow-hidden">
-                        <img src="src/img/logo/laravel.svg" alt="laravel" width="100">
-                    </div>
-                </div>
-                <div class="mb-12 p-4 md:w-1/7">
-                    <h3 class="font-semibold text-xl mb-3 text-zinc-900 text-center">Javascript</h3>
-                    <div class="overflow-hidden">
-                        <img src="src/img/logo/javascript.svg" alt="javascript" width="100">
-                    </div>
-                </div>
-                <div class="mb-12 p-4 md:w-1/7">
-                    <h3 class="font-semibold text-xl mb-3 text-zinc-900 text-center">MySql</h3>
-                    <div class="overflow-hidden">
-                        <img src="src/img/logo/mysql.svg" alt="mysql" width="100">
-                    </div>
-                </div>
-                <div class="mb-12 p-4 md:w-1/7">
-                    <h3 class="font-semibold text-xl mb-3 text-zinc-900 text-center">Python</h3>
-                    <div class="overflow-hidden">
-                        <img src="src/img/logo/python.svg" alt="python" width="100">
-                    </div>
-                </div>
-            </div>
+    <section id="skill" class="relative z-20 pt-36 pb-16">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="max-w-xl mx-auto text-center mb-16">
+            <h2 class="font-bold text-3xl text-color4 mb-4">
+              What I’m
+              <span class="text-color3">Good At</span>
+            </h2>
+          </div>
         </div>
-     </section>
-     <!-- Skill end -->
-
-     <!-- Feedback start -->
-     <section id="feedback" class="pt-36 pb-32 bg-slate-100">
-        <div class="container">
-            <div class="w-full px-4">
-                <div class="max-w-xl mx-auto text-center mb-16">
-                    <h2 class="font-bold text-3xl text-primary mb-4">Feedback</h2>
-                    <p class="font-medium text-base text-secondary md:text-lg">
-                        Feel free to share your feedback to help me make improvements in the future.
-                    </p>
-                </div>
+        <div class="w-full px-4 flex flex-wrap justify-center">
+          <div class="mb-12 p-4 md:w-1/7">
+            <h3 class="font-semibold text-xl mb-3 text-color3 text-center">
+              Figma
+            </h3>
+            <div class="overflow-hidden">
+              <img
+                src="src/img/logo/figma.svg"
+                alt="figma"
+                width="100"
+                class="w-24 invert"
+              />
             </div>
-            
-            <form action="#" method="post" role="form" id="feedbackForm" onsubmit="return validateForm()">
-                
-                <div class="w-full lg:w-2/3 lg:mx-auto">
-                    <div class="w-full px-4 mb-8">
-                        <label for="name" class="text-base font-bold text-primary">Name</label>
-                        <input type="text" id="name" name="name" class="w-full bg-emerald-100 text-black p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary">
-                    </div>
-                    <div class="w-full px-4 mb-8">
-                        <label for="email" class="text-base font-bold text-primary">Email</label>
-                        <input type="text" id="email" name="email" class="w-full bg-emerald-100 text-black p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary">
-                    </div>
-                    <div class="w-full px-4 mb-8">
-                        <label for="message" class="text-base font-bold text-primary">Message</label>
-                        <textarea type="text" id="message" name="message" class="w-full bg-emerald-100 text-black p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary h-32"></textarea>
-                    </div>
-    
-                    <div class="w-full">
-                        <button class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full w-full hover:opacity-80 hover:shadow-lg transition duration-500" type="submit">Send</button>
-                    </div>
-                </div>
-            </form>
+          </div>
+          <div class="mb-12 p-4 md:w-1/7">
+            <h3 class="font-semibold text-xl mb-3 text-color3 text-center">
+              HTML
+            </h3>
+            <div class="overflow-hidden">
+              <img
+                src="src/img/logo/html5.svg"
+                alt="html5"
+                width="100"
+                class="w-24 invert"
+              />
+            </div>
+          </div>
+          <div class="mb-12 p-4 md:w-1/7">
+            <h3 class="font-semibold text-xl mb-3 text-color3 text-center">
+              CSS
+            </h3>
+            <div class="overflow-hidden">
+              <img
+                src="src/img/logo/css3.svg"
+                alt="css3"
+                width="100"
+                class="w-24 invert"
+              />
+            </div>
+          </div>
+          <div class="mb-12 p-4 md:w-1/7">
+            <h3 class="font-semibold text-xl mb-3 text-color3 text-center">
+              Bootstrap
+            </h3>
+            <div class="overflow-hidden">
+              <img
+                src="src/img/logo/bootstrap.svg"
+                alt="bootstrap"
+                width="100"
+                class="w-24 invert"
+              />
+            </div>
+          </div>
+          <div class="mb-12 p-4 md:w-1/7">
+            <h3 class="font-semibold text-xl mb-3 text-color3 text-center">
+              PHP
+            </h3>
+            <div class="overflow-hidden">
+              <img
+                src="src/img/logo/php.svg"
+                alt="PHP"
+                width="100"
+                class="w-24 invert"
+              />
+            </div>
+          </div>
+          <div class="mb-12 p-4 md:w-1/7">
+            <h3 class="font-semibold text-xl mb-3 text-color3 text-center">
+              Laravel
+            </h3>
+            <div class="overflow-hidden">
+              <img
+                src="src/img/logo/laravel.svg"
+                alt="laravel"
+                width="100"
+                class="w-24 invert"
+              />
+            </div>
+          </div>
+          <div class="mb-12 p-4 md:w-1/7">
+            <h3 class="font-semibold text-xl mb-3 text-color3 text-center">
+              Javascript
+            </h3>
+            <div class="overflow-hidden">
+              <img
+                src="src/img/logo/javascript.svg"
+                alt="javascript"
+                width="100"
+                class="w-24 invert"
+              />
+            </div>
+          </div>
+          <div class="mb-12 p-4 md:w-1/7">
+            <h3 class="font-semibold text-xl mb-3 text-color3 text-center">
+              MySql
+            </h3>
+            <div class="overflow-hidden">
+              <img
+                src="src/img/logo/mysql.svg"
+                alt="mysql"
+                width="100"
+                class="w-24 invert"
+              />
+            </div>
+          </div>
+          <div class="mb-12 p-4 md:w-1/7">
+            <h3 class="font-semibold text-xl mb-3 text-color3 text-center">
+              Python
+            </h3>
+            <div class="overflow-hidden">
+              <img
+                src="src/img/logo/python.svg"
+                alt="python"
+                width="100"
+                class="w-24 invert"
+              />
+            </div>
+          </div>
         </div>
-     </section>
-     <!-- Feedback end -->
+      </div>
+    </section>
+    <!-- Skill end -->
 
-     <!-- Slider Feedback start -->
-     <section id="feedback-slider" class="pt-36 pb-32 bg-slate-100">
-        <div class="container">
-            <div class="w-full px-4">
-                <div class="max-w-xl mx-auto text-center mb-16">
-                    <h2 class="font-bold text-3xl text-primary mb-4">Your Feedback</h2>
-                </div>
-            </div>
-
-            <div class="swiper-container w-full overflow-hidden">
-                <div class="swiper-wrapper" id="feedback-container">
-                    <!-- Konten Slider Manual-->
-                     <div class="swiper-slide mb-12 p-8 bg-white rounded-lg shadow-lg">
-                        <div class="flex items-start">
-                            <img src="https://picsum.photos/100" alt="Profile" class="w-24 h-24 rounded-full mr-6">
-                            <div>
-                                <h3 class="font-semibold text-2xl">Khusnul</h3>
-                                <p class="text-gray-600 mt-2 text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam harum ducimus tenetur quasi neque nesciunt quidem at quae suscipit temporibus?</p>
-                            </div>
+    <!-- Project Start -->
+    <section
+      id="project"
+      class="relative z-20 pt-36 pb-16 bg-[url('../src/img/doodle-items.png')] bg-repeat"
+    >
+      <div class="container px-6 mx-auto">
+        <div class="w-full px-4">
+          <div class="max-w-xl mx-auto text-center mb-16">
+            <h2 class="font-bold text-3xl text-color4 mb-4">
+              My Current <span class="text-color3">Project</span>
+            </h2>
+          </div>
+        </div>
+        <!-- Slider -->
+        <div
+          class="bg-color2 bg-opacity-50 shadow-lg rounded-[70px] min-h-[80vh] flex flex-col justify-center py-12 xl:px"
+        >
+          <div class="container mx-auto">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                  <div class="flex flex-col xl:flex-row xl:gap-[30px]">
+                    <div
+                      class="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none"
+                    >
+                      <div class="flex flex-col gap-[30px]">
+                        <!-- Project number -->
+                        <div
+                          class="text-8xl font-extrabold text-transparent number"
+                        >
+                          <h1 class="sm:mt-3">01</h1>
                         </div>
-                    </div>
-                    <div class="swiper-slide mb-12 p-8 bg-white rounded-lg shadow-lg">
-                        <div class="flex items-start">
-                            <img src="https://picsum.photos/100" alt="Profile" class="w-24 h-24 rounded-full mr-6">
-                            <div>
-                                <h3 class="font-semibold text-2xl">Jayadi</h3>
-                                <p class="text-gray-600 mt-2 text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est voluptatibus ea perspiciatis rem soluta beatae commodi sapiente eveniet corporis illo reiciendis, aliquid odio nisi eum blanditiis ratione deleniti expedita sunt error quam. Quidem quibusdam facilis veritatis praesentium excepturi facere, quis, soluta architecto aliquid veniam perspiciatis iste repellendus exercitationem et hic?</p>
-                            </div>
+                        <!-- Project Category -->
+                        <h2
+                          class="font-bold leading-none text-[42px] text-white group-hover:text-primary transition-all duration-500 capitalize"
+                        >
+                          Web Developer
+                        </h2>
+                        <!-- Project Description -->
+                        <p class="w-full text-color4 opacity-95">
+                          Lorem ipsum, dolor sit amet consectetur adipisicing
+                          elit. Temporibus, sed!
+                        </p>
+                        <p
+                          class="flex flex-wrap gap-4 text-xl font-bold text-color3"
+                        >
+                          Html 5, Javascript, PHP, Laravel, Css 3
+                        </p>
+                        <!-- Border -->
+                        <div class="border border-white/20"></div>
+                        <!-- Button -->
+                        <div class="group">
+                          <a
+                            href="#"
+                            data-tooltip-target="tooltip-top"
+                            data-tooltip-placement="top"
+                            class="relative inline-block"
+                          >
+                            <i class="ri-github-fill text-5xl text-white"></i>
+                          </a>
                         </div>
+                      </div>
                     </div>
-
-                    <!-- Konten Slider Dari DB 
-                     ... 
-                    Konten Slider Dari DB -->
-                    
+                    <div class="w-full xl:w-[50%]">
+                      <img src="./src/img/project/1.jpg" alt="project1" class="rounded-lg p-0" />
+                    </div>
+                  </div>
                 </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                  <div class="flex flex-col xl:flex-row xl:gap-[30px]">
+                    <div
+                      class="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none"
+                    >
+                      <div class="flex flex-col gap-[30px]">
+                        <!-- Project number -->
+                        <div
+                          class="text-8xl font-extrabold text-transparent number"
+                        >
+                          <h1 class="sm:mt-3">02</h1>
+                        </div>
+                        <!-- Project Category -->
+                        <h2
+                          class="font-bold leading-none text-[42px] text-white group-hover:text-primary transition-all duration-500 capitalize"
+                        >
+                          Junior Web Developer
+                        </h2>
+                        <!-- Project Description -->
+                        <p class="w-full text-color4 opacity-95">
+                          Lorem, ipsum dolor sit amet consectetur adipisicing
+                          elit. Explicabo, aliquam tenetur soluta molestiae
+                          doloribus, dicta totam rerum magni placeat sapiente,
+                          quasi minus error commodi expedita?
+                        </p>
+                        <p
+                          class="flex flex-wrap gap-4 text-xl font-bold text-color3"
+                        >
+                          Html 5, Javascript, PHP, Laravel, Css 3
+                        </p>
+                        <!-- Border -->
+                        <div class="border border-white/20"></div>
+                        <!-- Button -->
+                        <div class="group">
+                          <a
+                            href="#"
+                            data-tooltip-target="tooltip-top"
+                            data-tooltip-placement="top"
+                            class="relative inline-block"
+                          >
+                            <i class="ri-github-fill text-5xl text-white"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="w-full xl:w-[50%]">
+                      <img src="./src/img/project/2.jpg" alt="project1" />
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                  <div class="flex flex-col xl:flex-row xl:gap-[30px]">
+                    <div
+                      class="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none"
+                    >
+                      <div class="flex flex-col gap-[30px]">
+                        <!-- Project number -->
+                        <div
+                          class="text-8xl font-extrabold text-transparent number"
+                        >
+                          <h1 class="sm:mt-3">03</h1>
+                        </div>
+                        <!-- Project Category -->
+                        <h2
+                          class="font-bold leading-none text-[42px] text-white group-hover:text-primary transition-all duration-500 capitalize"
+                        >
+                          Junior Web Developer
+                        </h2>
+                        <!-- Project Description -->
+                        <p class="w-full text-color4 opacity-95">
+                          Lorem, ipsum dolor sit amet consectetur adipisicing
+                          elit. Explicabo, aliquam tenetur soluta molestiae
+                          doloribus, dicta totam rerum magni placeat sapiente,
+                          quasi minus error commodi expedita?
+                        </p>
+                        <p
+                          class="flex flex-wrap gap-4 text-xl font-bold text-color3"
+                        >
+                          Html 5, Javascript, PHP, Laravel, Css 3
+                        </p>
+                        <!-- Border -->
+                        <div class="border border-white/20"></div>
+                        <!-- Button -->
+                        <div class="group">
+                          <a
+                            href="#"
+                            data-tooltip-target="tooltip-top"
+                            data-tooltip-placement="top"
+                            class="relative inline-block"
+                          >
+                            <i class="ri-github-fill text-5xl text-white"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="w-full xl:w-[50%]">
+                      <img src="./src/img/project/3.jpg" alt="project1" />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-        </div>
-     </section>
-     <!-- Slider Feedback end -->
+            <!-- Navigation -->
+            <button
+              class="swiper-button-next absolute top-1/2 right-4 md:right-12 lg:right-20 xl:right-52 transform -translate-y-1/2 bg-white w-12 h-12 rounded-full shadow-lg hover:bg-gray-400 transition-colors flex items-center justify-center"
+            >
+              <i class="ri-arrow-right-line text-2xl text-gray-800"></i>
+            </button>
 
-     <!-- Footer start -->
-      <footer class="bg-slate-950 pt-24 pb-12">
-        <div class="container">
-            <div class="text-center">
-                <p class="text-white text-sm">
-                    Copyright &copy; Made by Rifki.
-                </p>
-            </div>
+            <button
+              class="swiper-button-prev absolute top-1/2 left-4 md:left-12 lg:left-20 xl:left-52 transform -translate-y-1/2 bg-white w-12 h-12 rounded-full shadow-lg hover:bg-gray-400 transition-colors flex items-center justify-center"
+            >
+              <i class="ri-arrow-left-line text-2xl text-gray-800"></i>
+            </button>
+            <div class="swiper-pagination pb-16"></div>
+          </div>
         </div>
-      </footer>
-     <!-- Footer end -->
+      </div>
+    </section>
+    <!-- Project End -->
+
+    <!-- Footer start -->
+    <footer class="bg-color2 pt-24 pb-12">
+      <div class="container">
+        <div class="text-center">
+          <p class="text-white text-sm">Copyright &copy; Made by Rifki.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer end -->
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
-      
+
+    <!-- Animation -->
+    <script src="js/scrollreveal.min.js"></script>
+
     <!-- <script src="js/slider.js"></script> -->
-</body>
+  </body>
 </html>

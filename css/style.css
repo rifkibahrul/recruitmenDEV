@@ -7,7 +7,7 @@
 }
 .timeline-wrapper:before {
   content: "";
-  background: #474559;
+  background: #35878b;
   width: 3px;
   height: 100%;
   position: absolute;
@@ -15,7 +15,7 @@
 }
 
 .timeline-yr {
-  background: #474559;
+  background: #00ADB5;
   border-radius: 100%;
   position: absolute;
   width: 75px;
@@ -27,7 +27,7 @@
 }
 
 .timeline-yr span {
-  color: #ffffff;
+  color: #EEEEEE;
   font-size: 14px; /* Ukuran font lebih kecil */
   font-weight: bold;
   line-height: normal; /* Menghapus line-height yang terlalu besar */
@@ -41,39 +41,19 @@
   margin-left: 6em;
 }
 .timeline-info small {
-  color: #474559;
+  color: #EEEEEE;
   font-size: 16px;
   font-weight: bold;
   display: inline-block;
   vertical-align: middle;
   margin-left: 15px;
 }
-
-/* #slider {
-  transition: transform 0.5s ease-in-out;
+.swiper-container {
+  overflow: hidden; /* Pastikan slide lain tidak terlihat */
   width: 100%;
-  display: flex;
-} */
-
-/* .slider-item {
-  width: 100%;
-  transform: translateX(100%);
-  transition: transform 0.5s ease-in-out;
+  height: 100%;
 }
 
-.slider-item.active {
-  transform: translateX(0);
-  transition: transform 0.5s ease-in-out;
+.number {
+  -webkit-text-stroke: 2px #00ADB5
 }
-
-.slider-item.prev {
-  transform: translateX(-100%);
-  transition: transform 0.5s ease-in-out;
-} */
-
-/* Adjust container styles */
-/* #feedback-slider {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-} */

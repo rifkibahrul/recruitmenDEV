@@ -2,28 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    font-family: 'Inter', sans-serif;
+body {
+  font-family: "Epilogue", serif;
 }
 
-.navbar-fixed{
-    @apply fixed z-[9999] bg-white opacity-90;
-    backdrop-filter: blur(5px);
-    box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1)
+.navbar-fixed {
+  @apply fixed z-[9999] bg-color2 opacity-90;
+  backdrop-filter: blur(5px);
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
 }
 
 .hamburger-line {
-    @apply w-[30px] h-[2px] my-2 block bg-black;
+  @apply w-[30px] h-[2px] my-2 block bg-color4;
 }
 
-.hamburger-active > span:nth-child(1){
-    @apply rotate-45;
+.hamburger-active > span:nth-child(1) {
+  @apply rotate-45;
 }
 
-.hamburger-active > span:nth-child(2){
-    @apply scale-0;
+.hamburger-active > span:nth-child(2) {
+  @apply scale-0;
 }
 
-.hamburger-active > span:nth-child(3){
-    @apply -rotate-45;
+.hamburger-active > span:nth-child(3) {
+  @apply -rotate-45;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  /* @apply bg-transparent border-0 p-0 m-0; */
+  @apply text-white;
+  @apply transition duration-300;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  @apply text-primary;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  content: none;
 }
