@@ -111,35 +111,61 @@ hamburger.addEventListener("click", function () {
 // Navbar fixed saat scroll
 window.onscroll = function () {
   const header = document.querySelector("header");
-  const fixxedNav = header.offsetTop;
+  const fixedNav = header.offsetTop;
 
-  if (window.scrollY > fixxedNav) {
+  if (window.scrollY > fixedNav) {
     header.classList.add("navbar-fixed");
   } else {
     header.classList.remove("navbar-fixed");
   }
 };
 
-// Scroll Reveal animation
 document.addEventListener("DOMContentLoaded", function () {
   // Inisialisasi Swiper
   new Swiper(".swiper-container", {
     loop: false,
-    autoplay: { delay: 3000 },
+    // autoplay: { delay: 3000 },
     slidesPerView: 1,
     centeredSlides: true,
     spaceBetween: 20,
     pagination: { el: ".swiper-pagination", clickable: true },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".button-next",
+      prevEl: ".button-prev",
     },
-    scrollbar : {
-      el: ".swipper-scrollbar"
-    }
+    scrollbar: {
+      el: ".swipper-scrollbar",
+    },
+    on: {
+      init: function () {
+        updateNavigation(this);
+      },
+      slideChange: function () {
+        updateNavigation(this);
+      },
+    },
   });
 
-  // Inisialisasi scroll reveals
+  function updateNavigation(swiper) {
+    const prevButton = document.querySelector(".button-prev");
+    const nextButton = document.querySelector(".button-next");
+
+    // Cek jika di slide pertama
+    if (swiper.isBeginning) {
+      prevButton.classList.add("disabled");
+    } else {
+      prevButton.classList.remove("disabled");
+    }
+
+    // Cek jika di slide terakhir
+    if (swiper.isEnd) {
+      nextButton.classList.add("disabled");
+    } else {
+      nextButton.classList.remove("disabled");
+    }
+  }
+
+  // Scroll Reveal animation
   const sr = ScrollReveal({
     origin: "bottom",
     distance: "60px",
@@ -152,6 +178,10 @@ document.addEventListener("DOMContentLoaded", function () {
   sr.reveal(".hero__text", { origin: "top" });
   sr.reveal(".hero__img", { origin: "right" });
 
+  // About
+  sr.reveal(".about__left", { origin: "left" });
+  sr.reveal(".about__right", { origin: "right", delay: 800 });
+
   // Experience and Education
   sr.reveal(".experience__experience", {
     distance: "100px",
@@ -159,22 +189,23 @@ document.addEventListener("DOMContentLoaded", function () {
     delay: 100,
   });
   sr.reveal(".experience__text");
+
+  // Skills
+  sr.reveal(".skills__text", {
+    origin: "top",
+    distance: "100px",
+    interval: 100,
+  });
+  sr.reveal(".skills__image", {
+    origin: "right",
+    distance: "100px",
+    delay: 600,
+    interval: 100,
+  });
+
+  // Project
+  sr.reveal(".project__title");
+  sr.reveal(".project__subtitle", { delay: 600 });
+  sr.reveal(".project__bg", { delay: 800 });
+  sr.reveal(".project__slider", { delay: 1000 });
 });
-
-// const tooltipTriggers = document.querySelectorAll('[data-tooltip-target]');
-// const tooltips = document.querySelectorAll('[role="tooltip"]');
-
-// tooltipTriggers.forEach((trigger) => {
-//   const tooltipId = trigger.getAttribute('data-tooltip-target');
-//   const tooltip = document.getElementById(tooltipId);
-
-//   trigger.addEventListener('mouseover', () => {
-//     tooltip.classList.remove('hidden');
-//     tooltip.classList.add('opacity-100');
-//   });
-
-//   trigger.addEventListener('mouseout', () => {
-//     tooltip.classList.add('hidden');
-//     tooltip.classList.remove('opacity-100');
-//   });
-// });
